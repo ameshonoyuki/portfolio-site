@@ -33,7 +33,7 @@ const Home = () => {
                 TMAやCNPのファンアートを通じて、コミュニティーの皆さんに楽しんでもらえる作品を目指しています。
               </p>
               <p className="text-black fw-bold">
-                TMA幹部クロエとして、X（Twitter）Spacesで公式ラジオ「Today's TMA Radio」の火曜ホストを務め、 Stand.fmでは250回以上のエピソードを毎日配信するポッドキャスト「クロエのおしゃべり場」を運営しています。
+                TMA幹部クロエとして、X（Twitter）Spacesで公式ラジオ「Today&apos;s TMA Radio」の火曜ホストを務め、 Stand.fmでは250回以上のエピソードを毎日配信するポッドキャスト「クロエのおしゃべり場」を運営しています。
                 NFTコレクター（TOL-Pass & CNPホルダー）でもあります。
               </p>
               <p>
