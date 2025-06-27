@@ -3,26 +3,76 @@
 @tailwind utilities;
 
 body {
-  /* Darker green gradient */
-  background: linear-gradient(to bottom right, #a8e063, #56ab2f); /* Lighter green to darker green */
+  /* Original green gradient */
+  /* background: linear-gradient(to bottom right, #a8e063, #56ab2f); */
+
+  /* New kaleidoscopic background */
+  background: linear-gradient(to bottom right, #7FFFD4, #AFEEEE); /* Lighter turquoise green gradient */
   min-height: 100vh; /* Ensure gradient covers full height */
   position: relative; /* For pseudo-element positioning */
   overflow-x: hidden; /* Prevent horizontal scrollbar from background images */
 }
 
-body::before {
+
+
+/* Hero Section Background */
+.hero-background {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-background::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/artworks/work-6.png'), url('/artworks/work-7.png'), url('/artworks/work-8.png');
-  background-size: 50% auto, 50% auto, 50% auto; /* 各画像を画面の約半分程度の大きさに */
-  background-position: 5% 5%, 95% 50%, 10% 95%; /* work-8.png を左に寄せる */
+  background-image: url('/artworks/work-6.png'), url('/artworks/work-7.png');
+  background-size: 50% 100%; /* 2枚の画像を横に並べてコンテナを埋める */
+  background-position: left, right;
   background-repeat: no-repeat;
-  opacity: 0.5; /* 50% opacity */
-  z-index: -1; /* Place behind content */
+  opacity: 0.4; /* 60% transparency */
+  z-index: -1;
+}
+
+/* About Me Section Background */
+.about-background {
+  position: relative;
+  z-index: 1;
+}
+
+.about-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/artworks/work-9.png'), url('/artworks/work-10.png');
+  background-size: 50% auto, 50% auto;
+  background-position: left, right;
+  background-repeat: no-repeat;
+  opacity: 0.4; /* 60% transparency */
+  z-index: -1;
+}
+
+@keyframes kaleidoscopic-animation {
+  0% {
+    background-position: 0% 0%, 100% 100%;
+  }
+  25% {
+    background-position: 100% 0%, 0% 100%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%;
+  }
+  75% {
+    background-position: 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 100%;
+  }
 }
 
 .gradient-text {
@@ -31,6 +81,8 @@ body::before {
   -webkit-text-fill-color: transparent;
   animation: gradient-animation 10s ease infinite;
   letter-spacing: 0.1em; /* 文字間隔を広げる */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* テキストシャドウを追加 */
+  font-weight: 900; /* さらに太く */
 }
 
 @keyframes gradient-animation {

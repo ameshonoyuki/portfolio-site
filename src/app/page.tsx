@@ -5,15 +5,15 @@ const Home = () => {
   return (
     <div className="text-white min-vh-100">
       <Head>
-        <title>アメショのユキ | ポートフォリオ</title>
+        <title>アメショのユキのアトリエ | ポートフォリオ</title>
         <meta name="description" content="アメショのユキのAIアートと活動を紹介するポートフォリオサイト" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Hero Section */}
-      <section className="d-flex align-items-center justify-content-center vh-100 text-center text-white" id="home">
+      <section className="d-flex align-items-center justify-content-center vh-100 text-center text-white hero-background" id="home">
         <div>
-          <h1 className="display-1 fw-bold gradient-text">アメショのユキ</h1>
+          <h1 className="display-1 fw-bold gradient-text">アメショのユキのアトリエ</h1>
           <p className="lead my-4 text-black fw-bold">
             思わず見てしまうような魅せる絵画のようなAIアートや各種ファンアートを発信<br />
             ゴスロリガール、フラメンコガール、痛車、etc....
@@ -23,7 +23,7 @@ const Home = () => {
       </section>
 
       {/* About Me Section */}
-      <section className="py-5 text-white" id="about">
+      <section className="py-5 text-white about-background" id="about">
         <div className="container">
           <h2 className="text-center mb-4 display-4 gradient-text">About Me</h2>
           <div className="row justify-content-center">
@@ -63,9 +63,15 @@ const Home = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-md-8 text-center">
+            <div className="col-md-6 text-center">
               <video controls className="img-fluid mx-auto d-block" style={{ maxHeight: '500px', objectFit: 'contain' }}>
                 <source src="/artworks/work-video1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="col-md-6 text-center">
+              <video controls className="img-fluid mx-auto d-block" style={{ maxHeight: '500px', objectFit: 'contain' }}>
+                <source src="/artworks/work-video2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -80,7 +86,8 @@ const Home = () => {
           <p className="lead text-black fw-bold">新しい機会やコラボレーションを常に歓迎しています。お気軽にご連絡ください！</p>
           <div className="mt-3">
             <a href="https://x.com/kuroneko0618" className="text-black mx-2 fw-bold" target="_blank" rel="noopener noreferrer"><i className="bi bi-twitter"></i> X (Twitter)</a>
-            <a href="https://stand.fm/channels/65cf85580a4a74f98f461b16" className="text-black mx-2 fw-bold" target="_blank" rel="noopener noreferrer"><i className="bi bi-mic"></i> Stand.fm</a>
+            <a href="https://www.instagram.com/ameshonoyuki/?hl=ja" className="text-black mx-2 fw-bold" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.threads.com/@ameshonoyuki" className="text-black mx-2 fw-bold" target="_blank" rel="noopener noreferrer"><i className="bi bi-threads"></i> Threads</a>
           </div>
           <p className="mt-4 text-black fw-bold">&copy; {new Date().getFullYear()} アメショのユキ. All rights reserved.</p>
         </div>
