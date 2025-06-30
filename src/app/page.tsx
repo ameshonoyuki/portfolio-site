@@ -1,7 +1,67 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 
 const Home = () => {
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  // State to track if the initial play has happened for each video
+  const [isPlayed, setIsPlayed] = useState([false, false]);
+
+  // This effect should run only once to set up listeners
+  useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        // Initial style setup
+        video.style.opacity = '0';
+        video.style.transition = 'opacity 0.3s ease-in-out';
+
+        const handlePlay = () => {
+          video.style.opacity = '1';
+          // Set played state to true to hide button and show controls
+          setIsPlayed((prev) => {
+            if (prev[index]) return prev; // Avoid unnecessary state updates
+            const newState = [...prev];
+            newState[index] = true;
+            return newState;
+          });
+        };
+
+        const handleEnded = () => {
+          video.style.opacity = '0';
+          // Reset played state to show the button again
+          setIsPlayed((prev) => {
+            const newState = [...prev];
+            newState[index] = false;
+            return newState;
+          });
+        };
+
+        const handleTimeUpdate = () => {
+          if (video.duration - video.currentTime <= 0.3) {
+            video.style.opacity = '0';
+          }
+        };
+        
+        // Add event listeners
+        video.addEventListener('play', handlePlay);
+        video.addEventListener('ended', handleEnded);
+        video.addEventListener('timeupdate', handleTimeUpdate);
+
+        // Cleanup function to remove listeners
+        return () => {
+          video.removeEventListener('play', handlePlay);
+          video.removeEventListener('ended', handleEnded);
+          video.removeEventListener('timeupdate', handleTimeUpdate);
+        };
+      }
+    });
+  }, []); // Empty dependency array ensures this runs only once
+
+  const playVideo = (index: number) => {
+    videoRefs.current[index]?.play();
+  };
+
   return (
     <div className="text-white min-vh-100">
       <Head>
@@ -63,14 +123,36 @@ const Home = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-md-6 text-center">
-              <video controls className="img-fluid mx-auto d-block" style={{ maxHeight: '500px', objectFit: 'contain' }}>
+            {/* Video 1 */}
+            <div className="col-md-6 text-center" style={{ backgroundColor: 'black', position: 'relative' }}>
+              {!isPlayed[0] && (
+                <button className="play-button" onClick={() => playVideo(0)}>▶</button>
+              )}
+              <video
+                ref={el => videoRefs.current[0] = el}
+                controls={isPlayed[0]} // Show controls only after play
+                className="img-fluid mx-auto d-block"
+                style={{ maxHeight: '500px', objectFit: 'contain' }}
+                playsInline // Good practice for mobile
+                preload="metadata" // Helps get duration faster
+              >
                 <source src="/artworks/work-video1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="col-md-6 text-center">
-              <video controls className="img-fluid mx-auto d-block" style={{ maxHeight: '500px', objectFit: 'contain' }}>
+            {/* Video 2 */}
+            <div className="col-md-6 text-center" style={{ backgroundColor: 'black', position: 'relative' }}>
+              {!isPlayed[1] && (
+                <button className="play-button" onClick={() => playVideo(1)}>▶</button>
+              )}
+              <video
+                ref={el => videoRefs.current[1] = el}
+                controls={isPlayed[1]} // Show controls only after play
+                className="img-fluid mx-auto d-block"
+                style={{ maxHeight: '500px', objectFit: 'contain' }}
+                playsInline
+                preload="metadata"
+              >
                 <source src="/artworks/work-video2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
