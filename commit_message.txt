@@ -1,5 +1,1 @@
-feat: Implement video fade-in/out and custom play button
-
-- Add fade-in/out effects to videos on play and end.
-- Display a custom play button before the video is played.
-- Set the video container background to black.
+fix: Correct video ref type for build

@@ -131,7 +131,7 @@ const Home = () => {
                 <button className="play-button" onClick={() => playVideo(0)}>▶</button>
               )}
               <video
-                ref={el => videoRefs.current[0] = el}
+                ref={el => { videoRefs.current[0] = el; }}
                 controls={isPlayed[0]} // Show controls only after play
                 className="img-fluid mx-auto d-block"
                 style={{ maxHeight: '500px', objectFit: 'contain' }}
@@ -143,12 +143,12 @@ const Home = () => {
               </video>
             </div>
             {/* Video 2 */}
-            <div className="col-md-6 text-center" style={{ backgroundColor: 'black', position: 'relative' }}>
+            <div className="col-md-6 d-flex flex-column align-items-center">
               {!isPlayed[1] && (
                 <button className="play-button" onClick={() => playVideo(1)}>▶</button>
               )}
               <video
-                ref={el => videoRefs.current[1] = el}
+                ref={el => { videoRefs.current[1] = el; }}
                 controls={isPlayed[1]} // Show controls only after play
                 className="img-fluid mx-auto d-block"
                 style={{ maxHeight: '500px', objectFit: 'contain' }}
