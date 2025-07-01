@@ -1,1 +1,1 @@
-feat: Replace work-1.png with work-11.png
+feat: Align image heights in Projects section
