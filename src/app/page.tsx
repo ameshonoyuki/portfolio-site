@@ -102,7 +102,7 @@ const Home = () => {
           <h2 className="text-center mb-5 display-4 gradient-text">作品紹介</h2>
           <div className="row justify-content-center mb-4">
             <div className="col-md-4 text-center">
-              <Image src="/artworks/work-1.png" alt="AI Art 1" width={300} height={300} className="img-fluid mb-3" style={{ objectFit: 'contain' }} />
+              <Image src="/artworks/work-11.png" alt="AI Art 1" width={300} height={300} className="img-fluid mb-3" style={{ objectFit: 'contain' }} />
             </div>
             <div className="col-md-4 text-center">
               <Image src="/artworks/work-2.png" alt="AI Art 2" width={300} height={300} className="img-fluid mb-3" style={{ objectFit: 'contain' }} />
