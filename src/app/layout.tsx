@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A cool portfolio website",
+  title: "アメショのユキのアトリエ | ポートフォリオ",
+  description: "アメショのユキのAIアートと活動を紹介するポートフォリオサイト",
 };
 
 export default function RootLayout({

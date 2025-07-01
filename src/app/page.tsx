@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
-import Head from 'next/head';
+import Image from 'next/image';
 
 const Home = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -64,12 +64,6 @@ const Home = () => {
 
   return (
     <div className="text-white min-vh-100">
-      <Head>
-        <title>アメショのユキのアトリエ | ポートフォリオ</title>
-        <meta name="description" content="アメショのユキのAIアートと活動を紹介するポートフォリオサイト" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       {/* Hero Section */}
       <section className="d-flex align-items-center justify-content-center vh-100 text-center text-white hero-background" id="home">
         <div>
@@ -96,12 +90,20 @@ const Home = () => {
                 TMA幹部クロエとして、X（Twitter）Spacesで公式ラジオ「Today&apos;s TMA Radio」の火曜ホストを務め、 Stand.fmでは250回以上のエピソードを毎日配信するポッドキャスト「クロエのおしゃべり場」を運営しています。
                 NFTコレクター（TOL-Pass & CNPホルダー）でもあります。
               </p>
-              <p>
-                <strong>OpenSea:</strong> <a href="https://opensea.io/collection/bailarina-5" target="_blank" rel="noopener noreferrer" className="text-black fw-bold"><img src="/artworks/work-5.png" alt="OpenSea Collection" className="d-block mx-auto" style={{ width: '200px', height: 'auto' }} /></a>
-              </p>
-              <p>
-                <strong>Stand.fm:</strong> <a href="https://stand.fm/episodes" target="_blank" rel="noopener noreferrer" className="text-black fw-bold"><img src="/artworks/work-4.png" alt="Stand.fm Episodes" className="d-block mx-auto" style={{ width: '200px', height: 'auto' }} /></a>
-              </p>
+              <div className="row justify-content-center align-items-start mt-4">
+                <div className="col-md-6 d-flex flex-column align-items-center">
+                  <strong className="fs-5 text-black mb-2">OpenSea:</strong>
+                  <a href="https://opensea.io/collection/bailarina-5" target="_blank" rel="noopener noreferrer" className="text-black fw-bold">
+                    <Image src="/artworks/work-5.png" alt="OpenSea Collection" width={300} height={300} className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+                  </a>
+                </div>
+                <div className="col-md-6 d-flex flex-column align-items-center">
+                  <strong className="fs-5 text-black mb-2">Stand.fm:</strong>
+                  <a href="https://stand.fm/episodes" target="_blank" rel="noopener noreferrer" className="text-black fw-bold">
+                    <Image src="/artworks/work-4.png" alt="Stand.fm Episodes" width={300} height={300} className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -113,13 +115,13 @@ const Home = () => {
           <h2 className="text-center mb-5 display-4 gradient-text">作品紹介</h2>
           <div className="row justify-content-center mb-4">
             <div className="col-md-4 text-center">
-              <img src="/artworks/work-1.png" alt="AI Art 1" className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+              <Image src="/artworks/work-1.png" alt="AI Art 1" width={300} height={300} className="img-fluid mb-3" style={{ objectFit: 'contain' }} />
             </div>
             <div className="col-md-4 text-center">
-              <img src="/artworks/work-2.png" alt="AI Art 2" className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+              <Image src="/artworks/work-2.png" alt="AI Art 2" width={300} height={300} className="img-fluid mb-3" style={{ objectFit: 'contain' }} />
             </div>
             <div className="col-md-4 text-center">
-              <img src="/artworks/work-3.png" alt="AI Art 3" className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+              <Image src="/artworks/work-3.png" alt="AI Art 3" width={300} height={300} className="img-fluid mb-3" style={{ objectFit: 'contain' }} />
             </div>
           </div>
           <div className="row justify-content-center">
