@@ -1,1 +1,1 @@
-fix: Restore video2 position and styling
+feat: Replace videos in Projects section with work-video3.mp4
