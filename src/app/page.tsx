@@ -143,7 +143,7 @@ const Home = () => {
               </video>
             </div>
             {/* Video 2 */}
-            <div className="col-md-6 d-flex flex-column align-items-center">
+            <div className="col-md-6 text-center" style={{ backgroundColor: 'black', position: 'relative' }}>
               {!isPlayed[1] && (
                 <button className="play-button" onClick={() => playVideo(1)}>▶</button>
               )}
