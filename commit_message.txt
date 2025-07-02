@@ -1,1 +1,1 @@
-Add muted attribute to video tag to address autoplay policy
+Add trailingSlash: true to next.config.mjs for GitHub Pages compatibility
