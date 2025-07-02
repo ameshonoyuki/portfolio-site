@@ -1,1 +1,1 @@
-feat: Align image heights in Projects section
+Fix asset paths for GitHub Pages
