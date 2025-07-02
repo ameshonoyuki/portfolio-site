@@ -1,1 +1,1 @@
-Fix relative paths for background images in globals.css
+Revert asset paths to public directory relative paths and re-enable font

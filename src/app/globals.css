@@ -28,7 +28,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../artworks/work-6.png'), url('../../artworks/work-7.png');
+  background-image: url('/artworks/work-6.png'), url('/artworks/work-7.png');
   background-size: 50% 100%; /* 2枚の画像を横に並べてコンテナを埋める */
   background-position: left, right;
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../artworks/work-9.png'), url('../../artworks/work-10.png');
+  background-image: url('/artworks/work-9.png'), url('/artworks/work-10.png');
   background-size: 50% auto, 50% auto;
   background-position: left, right;
   background-repeat: no-repeat;
