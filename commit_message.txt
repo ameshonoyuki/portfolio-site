@@ -1,1 +1,1 @@
-Add trailingSlash: true to next.config.mjs for GitHub Pages compatibility
+Use process.env.NEXT_PUBLIC_BASE_PATH for image and video paths in page.tsx

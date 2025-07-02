@@ -81,13 +81,13 @@ const Home = () => {
                 <div className="col-md-6 d-flex flex-column align-items-center">
                   <strong className="fs-5 text-black mb-2">OpenSea:</strong>
                   <a href="https://opensea.io/collection/bailarina-5" target="_blank" rel="noopener noreferrer" className="text-black fw-bold">
-                    <Image src="/artworks/work-5.png" alt="OpenSea Collection" width={300} height={300} className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+                    <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/artworks/work-5.png`} alt="OpenSea Collection" width={300} height={300} className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
                   </a>
                 </div>
                 <div className="col-md-6 d-flex flex-column align-items-center">
                   <strong className="fs-5 text-black mb-2">Stand.fm:</strong>
                   <a href="https://stand.fm/episodes" target="_blank" rel="noopener noreferrer" className="text-black fw-bold">
-                    <Image src="/artworks/work-4.png" alt="Stand.fm Episodes" width={300} height={300} className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+                    <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/artworks/work-4.png`} alt="Stand.fm Episodes" width={300} height={300} className="img-fluid mb-3" style={{ maxHeight: '300px', objectFit: 'contain' }} />
                   </a>
                 </div>
               </div>
@@ -102,13 +102,13 @@ const Home = () => {
           <h2 className="text-center mb-5 display-4 gradient-text">作品紹介</h2>
           <div className="row justify-content-center mb-4">
             <div className="col-md-4 text-center mb-3" style={{ height: '300px', position: 'relative' }}>
-              <Image src="/artworks/work-11.png" alt="AI Art 1" fill style={{ objectFit: 'contain' }} />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/artworks/work-11.png`} alt="AI Art 1" fill style={{ objectFit: 'contain' }} />
             </div>
             <div className="col-md-4 text-center mb-3" style={{ height: '300px', position: 'relative' }}>
-              <Image src="/artworks/work-2.png" alt="AI Art 2" fill style={{ objectFit: 'contain' }} />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/artworks/work-2.png`} alt="AI Art 2" fill style={{ objectFit: 'contain' }} />
             </div>
             <div className="col-md-4 text-center mb-3" style={{ height: '300px', position: 'relative' }}>
-              <Image src="/artworks/work-3.png" alt="AI Art 3" fill style={{ objectFit: 'contain' }} />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/artworks/work-3.png`} alt="AI Art 3" fill style={{ objectFit: 'contain' }} />
             </div>
           </div>
           <div className="row justify-content-center">
@@ -126,7 +126,7 @@ const Home = () => {
                 preload="metadata" // Helps get duration faster
                 muted // Add muted attribute for autoplay
               >
-                <source src="/artworks/work-video3.mp4" type="video/mp4" />
+                <source src={`${process.env.NEXT_PUBLIC_BASE_PATH}/artworks/work-video3.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
