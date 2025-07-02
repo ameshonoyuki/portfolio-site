@@ -1,1 +1,1 @@
-Temporarily disable next/font/google to debug font loading issue
+Fix relative paths for background images in globals.css
