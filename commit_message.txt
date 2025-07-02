@@ -1,1 +1,1 @@
-Fix image and video paths in page.tsx for GitHub Pages
+Temporarily disable next/font/google to debug font loading issue
