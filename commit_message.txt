@@ -1,1 +1,1 @@
-Use process.env.NEXT_PUBLIC_BASE_PATH for image and video paths in page.tsx
+Revert GitHub Pages specific configurations for Vercel deployment
