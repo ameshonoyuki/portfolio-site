@@ -1,1 +1,1 @@
-Revert GitHub Pages specific configurations for Vercel deployment
+Trigger Vercel deploy
