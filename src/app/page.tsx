@@ -124,6 +124,7 @@ const Home = () => {
                 style={{ maxHeight: '500px', objectFit: 'contain' }}
                 playsInline // Good practice for mobile
                 preload="metadata" // Helps get duration faster
+                muted // Add muted attribute for autoplay
               >
                 <source src="/artworks/work-video3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

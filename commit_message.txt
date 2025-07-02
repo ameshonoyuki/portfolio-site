@@ -1,1 +1,1 @@
-Revert asset paths to public directory relative paths and re-enable font
+Add muted attribute to video tag to address autoplay policy
