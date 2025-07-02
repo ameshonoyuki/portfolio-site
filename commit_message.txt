@@ -1,1 +1,1 @@
-Fix asset paths for GitHub Pages
+Fix image and video paths in page.tsx for GitHub Pages
