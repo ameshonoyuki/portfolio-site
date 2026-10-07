@@ -24,12 +24,12 @@ export default function About() {
           <Reveal className="relative mx-auto w-full max-w-md lg:mx-0">
             <div className="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-3xl ring-1 ring-white/20 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)]">
               <Image
-                src={workSrc(8)}
-                alt="路地に佇む、猫耳の着物の少女"
+                src="/artworks/x/x-2082209484949090572.jpg"
+                alt="月夜の庭で水面に触れる猫耳の少女。水面に和歌が光っている"
                 fill
                 sizes="(min-width:1024px) 28rem, 90vw"
                 className="object-cover"
-                style={{ objectPosition: "50% 30%" }}
+                style={{ objectPosition: "50% 20%" }}
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-bg/50 via-transparent to-transparent" />
             </div>

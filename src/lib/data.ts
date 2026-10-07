@@ -120,11 +120,62 @@ export const HERO_SLIDES: { src: string; pos: string; alt: string }[] = [
   { src: xSrc("2067394207036395830"), pos: "50% 30%", alt: "金の甲冑をまとい、二頭の馬が引く戦車に立つ戦士" },
 ];
 
-export const VIDEOS = [
-  { id: 3, src: "/media/motion-3.mp4", poster: "/media/motion-3.jpg", dur: "0:20", alt: "ホログラムの画面に囲まれたサイバーな少女のモーション作品" },
-  { id: 2, src: "/media/motion-2.mp4", poster: "/media/motion-2.jpg", dur: "0:13", alt: "モーション作品 02" },
-  { id: 1, src: "/media/motion-1.mp4", poster: "/media/motion-1.jpg", dur: "0:05", alt: "モーション作品 01" },
+export type VideoItem = {
+  id: string; // 投稿ID（ファイル名にも使う）
+  w: number;
+  h: number;
+  dur: string;
+  date: string;
+  alt: string;
+  title?: string;
+  tag?: string;
+  pos?: string; // 一覧のトリミング位置
+};
+
+// 動く作品（X の投稿の動画。新しい順）
+export const VIDEOS: VideoItem[] = [
+  {
+    id: "2084918244595679641",
+    w: 644,
+    h: 960,
+    dur: "0:15",
+    date: "2026.08.05",
+    title: "極彩、宵に舞う",
+    alt: "ステンドグラスの広間で、赤い着物の女性が扇を手に舞う",
+  },
+  {
+    id: "2083528190484779144",
+    w: 640,
+    h: 480,
+    dur: "0:10",
+    date: "2026.08.01",
+    tag: "Grok",
+    alt: "浮世絵の壁の前で、黒い着物の女性が腕を広げてひざまずく",
+  },
+  {
+    id: "2058841685430571505",
+    w: 448,
+    h: 672,
+    dur: "0:06",
+    date: "2026.05.25",
+    title: "蓮光蝶舞",
+    alt: "蓮の咲く水辺で、扇を手に舞う着物の女性と蝶",
+  },
+  {
+    id: "2048377968188416454",
+    w: 1280,
+    h: 720,
+    dur: "0:40",
+    date: "2026.04.26",
+    title: "Bellatrix",
+    tag: "Seedance 2.0",
+    pos: "64% 50%",
+    alt: "霧と炎の街を、銃を手に駆け抜ける女性（アクション映画風のショート動画）",
+  },
 ];
+
+export const videoSrc = (id: string) => `/media/m-${id}.mp4`;
+export const videoPoster = (id: string) => `/media/m-${id}.jpg`;
 
 export const CHANNEL_URL = "https://www.youtube.com/channel/UCsLId-xudCR75VP2pBWXHsg";
 

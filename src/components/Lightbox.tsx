@@ -7,7 +7,7 @@ import { pad } from "@/lib/data";
 type Base = { alt: string; caption?: string; sub?: string };
 export type LightboxItem =
   | (Base & { kind: "image"; src: string; w: number; h: number })
-  | (Base & { kind: "video"; src: string; poster?: string })
+  | (Base & { kind: "video"; src: string; poster?: string; w: number; h: number })
   | (Base & { kind: "youtube"; id: string });
 
 type Props = {
@@ -52,8 +52,6 @@ export default function Lightbox({ items, index, onClose, onIndex }: Props) {
   }, []);
 
   if (!it) return null;
-
-  const square = "min(76vh, 92vw)";
 
   return (
     <div
@@ -118,7 +116,7 @@ export default function Lightbox({ items, index, onClose, onIndex }: Props) {
             autoPlay
             loop
             playsInline
-            style={{ width: square, height: square }}
+            style={{ width: `min(92vw, calc(76vh * ${it.w} / ${it.h}))`, aspectRatio: `${it.w} / ${it.h}` }}
             className={`object-contain ${frame}`}
           />
         )}
