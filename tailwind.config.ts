@@ -1,18 +1,22 @@
-
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.tsx",
-    "./src/components/**/*.tsx",
-    "./src/app/**/*.tsx",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        bg: "#08070f",
+        bg2: "#0f0d1c",
+        ink: "#f1ecf8",
+        muted: "#a79fbd",
+        violet: "#9d7bff",
+        teal: "#5fe3d0",
+        gold: "#e8c98a",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", "Hiragino Sans", "Yu Gothic", "Meiryo", "sans-serif"],
+        mincho: ["var(--font-mincho)", "Hiragino Mincho ProN", "Yu Mincho", "serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
     },
   },
